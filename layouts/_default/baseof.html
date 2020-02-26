@@ -27,8 +27,7 @@
         {{- partial "head/link.html" . -}}
         {{- partial "head/seo.html" . -}}
     </head>
-    <body>
-        {{- /* Check theme isDark before body rendering */ -}}
+    <body class="dark-theme">
         <script>
             if (!window.localStorage || !window.localStorage.getItem('theme')) {
                 {{- $theme := .Site.Params.defaultTheme -}}

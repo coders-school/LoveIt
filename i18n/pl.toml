@@ -1,0 +1,103 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === Post ===
+[posts]
+other = "Posty"
+# === Post ===
+
+# === Taxonomy ===
+[all]
+other = "wszystkie "
+
+[tag]
+other = "Tag"
+
+[tags]
+other = "Tagi"
+
+[category]
+other = "Kategoria"
+
+[categories]
+other = "Kategorie"
+# === Taxonomy ===
+
+# === Pagination ===
+[More]
+other = "Więcej"
+# === Pagination ===
+
+# === partials/comments.html ===
+[valineLang]
+other = "pl"
+# === partials/comments.html ===
+
+# === partials/footer.html ===
+[powered]
+other = "Napędzany przez %s"
+
+[theme]
+other = "Szablon - "
+# === partials/footer.html ===
+
+# === posts/single.html ===
+[toc]
+other = "Spis treści"
+
+[publish]
+other = "opublikowano"
+
+[included]
+other = "zawarty w"
+
+[wordCount]
+other = "około {{ .Count }} słów"
+
+[readingTime]
+other = "{{ .Count }} min"
+
+[pageviews]
+other = "<span class=leancloud-visitors-count></span> wyświetleń"
+
+[author]
+other = "Autor"
+
+[lastMod]
+other = "Artykuł ostatnio zaktualizowany %s"
+
+[license]
+other = "Opublikowano na licencji %s"
+
+[back]
+other = "Wstecz"
+
+[home]
+other = "Strona główna"
+
+[readmore]
+other = "Więcej >>"
+
+[day]
+other = "d"
+
+[hour]
+other = "godz"
+
+[minute]
+other = "min"
+
+[second]
+other = "sec"
+
+[return]
+other = "powrót"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "Nie znaleziono strony :("
+
+[backToHome]
+other = "Powrót na stronę główną"
+# === 404.html ===
