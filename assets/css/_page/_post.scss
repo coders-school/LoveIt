@@ -83,7 +83,7 @@
   }
 
   h2::before {
-    content: "#";
+    content: "# ";
     margin-right: .3125rem;
     color: $post-link-color;
 
@@ -96,7 +96,7 @@
   h4::before,
   h5::before,
   h6::before {
-    content: "|";
+    content: "| ";
     margin-right: .3125rem;
     color: $post-link-color;
 
