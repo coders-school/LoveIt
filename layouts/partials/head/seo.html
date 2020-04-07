@@ -31,7 +31,7 @@
             },
         {{- end -}}
         {{- with .Site.Params.description -}}
-            "description": "{{ . | safeJS }}",
+            "description": {{ printf "\"%s\"" . | safeJS }}
         {{- end -}}
         {{- with .Site.Params.image -}}
             "image": "{{ .url | absURL }}",
@@ -42,7 +42,7 @@
         {{- with .Site.Copyright -}}
             "license": "{{ . | safeJS }}",
         {{- end -}}
-        "name": "{{ .Site.Title | safeJS }}"
+        "name": {{ printf "\"%s\"" .Site.Title | safeJS }}
     }
     </script>
 
@@ -52,7 +52,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "{{ .Title | safeJS }}",
+        "headline": {{ printf "\"%s\"" .Title | safeJS }}
         "inLanguage": "{{ .Site.LanguageCode }}",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -101,7 +101,7 @@
                 "name": "{{ . | safeJS }}"
             },
         {{- end -}}
-        "description": "{{ .Description | safeJS }}"
+        "description": {{ printf "\"%s\"" .Description | safeJS }}
     }
     </script>
 {{- end -}}
