@@ -7,9 +7,44 @@
             {{- .Title -}}
         </h1>
 
+        {{- /* TOC */ -}}
+        {{- if or .Params.toc (and .Site.Params.toc (ne .Params.toc false)) -}}
+            <div class="toc" id="toc-auto">
+                <h2 class="toc-title">{{ T "contents" }}</h2>
+                {{- $globalAutoCollapseToc := .Site.Params.autoCollapseToc | default true }}
+                <div class="toc-content{{ if not (and $globalAutoCollapseToc (ne .Params.autoCollapseToc false)) }} always-active{{ end }}" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>{{ T "contents" }}</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static">
+                        {{- $toc := .TableOfContents -}}
+                        {{- $toc = partial "function/fontawesome.html" $toc -}}
+                        {{- $toc = partial "function/ruby.html" $toc -}}
+                        {{- $toc | safeHTML -}}
+                    </div>
+                </details>
+            </div>
+        {{- end -}}
+
         {{- /* Content */ -}}
         <div class="content" id="content">
             {{- partial "single/content.html" .Content -}}
+        </div>
+
+        {{- /* Footer */ -}}
+        {{- partial "single/footer.html" . -}}
+
+        {{- /* Comment */ -}}
+        <div class="comment">
+            {{- if ( .Params.comment | default true ) -}}
+                {{- partial "comment.html" . -}}
+            {{- end -}}
         </div>
     </div>
 {{- end -}}
