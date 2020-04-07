@@ -8,7 +8,7 @@
 {{- if eq (getenv "HUGO_ENV") "production" | and .Site.Params.cdn.jquery_js -}}
     {{- $jquery = .Site.Params.cdn.jquery_js -}}
 {{- else -}}
-    {{- $res := resources.Get "js/lib/jquery/jquery.slim.min.js" -}}
+    {{- $res := resources.Get "js/lib/jquery/jquery.full.min.js" -}}
     {{- $jquery = printf "<script src=\"%s\"></script>" $res.RelPermalink -}}
 {{- end -}}
 {{- $jquery | safeHTML -}}

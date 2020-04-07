@@ -1,32 +1,40 @@
 @media only screen and (max-width: 1800px) {
   .page {
-    max-width: 780px;
+    max-width: 880px;
+    margin-left: 12%;
 
     .post-toc {
       width: 300px;
-      margin-left: 800px;
+      margin-left: 900px;
     }
   }
 }
 
 @media only screen and (max-width: 1440px) {
   .page {
-    max-width: 680px;
+    max-width: 780px;
+    margin-left: 10%;
 
     .post-toc {
       width: 240px;
-      margin-left: 700px;
+      margin-left: 800px;
     }
   }
 }
 
 @media only screen and (max-width: 1200px) {
+  .navbar {
+    .navbar-container {
+      margin: 0 0.2rem;
+    }
+  }
   .page {
-    max-width: 560px;
+    max-width: 660px;
+    margin-left: 8%;
 
     .post-toc {
       width: 180px;
-      margin-left: 580px;
+      margin-left: 680px;
     }
   }
 }
@@ -34,12 +42,35 @@
 @media only screen and (max-width: 960px) {
   .navbar {
     .navbar-container {
-      margin: 0 1rem;
+      margin: 0 0.1rem;
     }
   }
 
   .page {
-    max-width: 80%;
+    max-width: 90%;
+    margin-left: 4%;
+
+    .post-toc {
+      display: none;
+    }
+
+    .post-toc-mobile {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block;
+  }
+
+  .page {
+    max-width: 95%;
 
     .post-toc {
       display: none;
@@ -62,6 +93,7 @@
 
   .page {
     max-width: 100%;
+    margin-left: 0;
 
     .categories-card {
       .card-item {

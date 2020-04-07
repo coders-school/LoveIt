@@ -175,13 +175,14 @@ pre {
     background: $code-background-color-dark;
 
     /* Parentheses */ .p { color: #A9A9B3 }
-    /* Keyword */ .k { color: #D371E3 }
+    /* Keyword */ .k { color: #d33682 }
     /* KeywordConstant */ .kc { color: #D371E3 }
     /* KeywordDeclaration */ .kd { color: #D371E3 }
     /* KeywordNamespace */ .kn { color: #D371E3 }
     /* KeywordPseudo */ .kp { color: #D371E3 }
     /* KeywordReserved */ .kr { color: #D371E3 }
     /* KeywordType */ .kt { color: #8be9fd }
+    /* Name */  .n { color: #E5BF78 }
     /* NameAttribute */ .na { color: #41B1F5 }
     /* NameBuiltin */ .nb { color: #8be9fd; font-style: italic }
     /* NameClass */ .nc { color: #E5BF78 }
@@ -232,3 +233,6 @@ pre {
     /* GenericUnderline */ .gl { text-decoration: underline }
   }
 }
+
+.gist * { background-color: $code-background-color }
+.gist td { border: none !important; }

@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>
-            {{- block "title" . }}{{ .Site.Title }}{{ end -}}
+            {{- block "title" . }}{{ .Site.Title | html }}{{ end -}}
         </title>
         {{- partial "head.html" . -}}
     </head>

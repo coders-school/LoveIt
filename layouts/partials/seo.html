@@ -12,7 +12,7 @@
             },
         {{- end -}}
         {{- with .Site.Params.description -}}
-            "description": "{{ . }}",
+            "description": {{ printf "\"%s\"" . | safeJS }},
         {{- end -}}
         {{- with .Site.Params.image -}}
             "image": "{{ .url | absURL }}",
@@ -33,7 +33,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "{{ .Title }}",
+        "headline": {{ printf "\"%s\"" .Title | safeJS }},
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "{{ .Permalink }}"
@@ -88,7 +88,7 @@
                 "name": "{{ . }}"
             },
         {{- end -}}
-        "description": "{{ .Description }}"
+        "description": {{ printf "\"%s\"" .Description | safeJS }}
     }
     </script>
 {{- end -}}
