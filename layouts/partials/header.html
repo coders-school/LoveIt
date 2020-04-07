@@ -3,7 +3,7 @@
     <div class="header-wrapper">
         <div class="header-title">
             <a href="{{ `/` | relLangURL }}">
-                {{- .Site.Title -}}
+                {{- substr .Site.Title 0 13 -}}
             </a>
         </div>
         <div class="menu">

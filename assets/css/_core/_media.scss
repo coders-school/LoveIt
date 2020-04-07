@@ -1,5 +1,15 @@
 @media only screen and (max-width: 1800px) {
   .page {
+    max-width: 880px;
+
+    #toc-auto {
+      margin-left: 900px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .page {
     max-width: 780px;
 
     #toc-auto {
@@ -8,22 +18,12 @@
   }
 }
 
-@media only screen and (max-width: 1440px) {
-  .page {
-    max-width: 680px;
-
-    #toc-auto {
-      margin-left: 700px;
-    }
-  }
-}
-
 @media only screen and (max-width: 1200px) {
   .page {
-    max-width: 560px;
+    max-width: 660px;
 
     #toc-auto {
-      margin-left: 580px;
+      margin-left: 680px;
     }
   }
 }
@@ -36,7 +36,7 @@
   }
 
   .page {
-    max-width: 80%;
+    max-width: 100%;
 
     #toc-auto {
       display: none;
