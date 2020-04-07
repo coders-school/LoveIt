@@ -258,7 +258,7 @@ $code-highlight-color-map-dark: (
   /* KeywordPseudo */ 'kp': #d371e3,
   /* KeywordReserved */ 'kr': #d371e3,
   /* KeywordType */ 'kt': #d371e3,
-  /* Name */ 'n': #a9b2c0,
+  /* Name */ 'n': $code-color-dark,
   /* NameAttribute */ 'na': #41b0f5,
   /* NameBuiltin */ 'nb': #19b9c4,
   /* NameBuiltinPseudo */ 'bp': #ecbf6f,
