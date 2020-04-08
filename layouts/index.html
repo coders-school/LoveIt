@@ -5,6 +5,29 @@
             {{- partial "home/profile.html" . -}}
         {{- end -}}
 
+        <div style="display: flex;
+                    justify-content: space-around;
+                    flex-flow: row wrap;">
+            <h4 style="display: block;
+                       min-width: 200px;
+                       padding: 15px 25px;
+                       border: 1px solid white;
+                       border-radius: 5px;
+                       text-align: center;
+                       background-color: #8B3536;">
+                <a href="/o-nas/">Poznaj nas lepiej</a>
+            </h4>
+            <h4 style="display: block;
+                       min-width: 200px;
+                       padding: 15px 25px;
+                       border: 1px solid white;
+                       border-radius: 5px;
+                       text-align: center;
+                       background-color: #8B3536;">
+                <a href="/kurs-online">Obczaj nasz kurs C++ online</a>
+            </h4>
+        </div>
+
         {{- /* Posts */ -}}
         {{- if ne .Site.Params.home.posts.enable false -}}
             {{- /* Paginate */ -}}
