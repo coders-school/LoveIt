@@ -1,7 +1,7 @@
 @mixin summary {
   .summary {
-    padding-top: 1rem;
-    padding-bottom: .8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     color: $global-font-color;
     border-bottom: 1px dashed $global-border-color;
 
@@ -29,7 +29,7 @@
     .single-title {
       font-size: 1.4rem;
       line-height: 140%;
-      margin: 0.4rem 0;
+      margin: 1.0rem 0 0.5rem 0;
     }
 
     .content {
@@ -38,7 +38,7 @@
       -moz-box-orient: vertical;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
-      margin-top: .3rem;
+      margin: 1.0rem 0;
       width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
