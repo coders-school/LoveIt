@@ -13,6 +13,7 @@ header {
   }
 
   .menu .menu-item {
+    font-weight: 600;
     position: relative;
   }
 
@@ -52,13 +53,13 @@ header {
     justify-content: space-between;
 
     .header-title {
-      font-size: 1.5vw;
+      font-size: 1.8vw;
     }
 
     .menu {
       .menu-item {
-        margin: 0 .45rem;
-        font-size: 1.5vw;
+        margin: 0 .5rem;
+        font-size: 1.6vw;
 
         &.theme-switch {
           margin: 0 .3rem;
@@ -67,9 +68,11 @@ header {
 
       a.active {
         font-weight: 900;
+        border-bottom: 2px solid $header-hover-color;
         color: $header-hover-color;
-
+        
         .dark-theme & {
+          border-bottom: 2px solid $header-hover-color-dark;
           color: $header-hover-color-dark;
         }
       }
@@ -89,7 +92,7 @@ header {
     transition: all 0.3s ease 0s;
 
     .header-title {
-      font-size: 3vw;
+      font-size: 4vw;
     }
 
     .header-container {

@@ -2,10 +2,33 @@
 // Variables
 // ==============================
 
+@font-face {
+  font-family: 'Rajdhani';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../lib/fonts/Rajdhani-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-weight: 600;
+  font-style: semi-bold;
+  src: url(../lib/fonts/Rajdhani-SemiBold.ttf) format('truetype');
+} 
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-weight: 700;
+  font-style: bold;
+  src: url(../lib/fonts/Rajdhani-Bold.ttf) format('truetype');
+} 
+
+// @import url('https://fonts.googleapis.com/css?family=Rajdhani:500,600,700&display=swap');
+
 // ========== Global ========== //
 // Font and Line Height
-$global-font-family: -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft Yahei, Segoe UI, Helvetica, Arial, sans-serif, Segoe UI Emoji !default;
-$global-font-size: 16px;
+$global-font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft Yahei, Segoe UI, Helvetica, Arial, sans-serif, Segoe UI Emoji !default;
+$global-font-size: 17px;
 $global-font-weight: 400;
 $global-line-height: 1.5rem;
 
@@ -19,7 +42,7 @@ $global-font-color-dark: #c9c9d3 !default;
 
 // Color of the secondary text
 $global-font-secondary-color: #a9a9b3 !default;
-$global-font-secondary-color-dark: #7d7d7f !default;
+$global-font-secondary-color-dark: #9d9d9f !default;
 
 // Color of the link
 $global-link-color: #161209 !default;
