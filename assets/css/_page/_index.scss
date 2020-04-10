@@ -6,6 +6,29 @@
   padding-top: $page-padding-top-desktop;
 }
 
+.button {
+  display: block;
+  min-width: 200px;
+  padding: 15px 25px;
+  border: 1px solid $global-link-color;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff !important;
+  background-color: #8B3536;
+  margin: 30px 15px;
+
+  .dark-theme & {
+    border-color: $global-link-color-dark;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #cf802a;
+    color: #fff !important;
+  }
+
+}
+
 @import "_single";
 @import "_special";
 @import "_archive";
