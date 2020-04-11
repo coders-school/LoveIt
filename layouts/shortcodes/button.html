@@ -1,1 +1,5 @@
-<a class="button" href="{{.Get 0}}" role="button">{{.Get 1}}</a>
+{{- if .IsNamedParams -}}
+<a class="button" href="{{ .Get `link` }}" role="button">{{ .Get `text` }}</a>
+{{- else -}}
+<a class="button" href="{{ .Get 0 }}" role="button">{{ .Get 1 }}</a>
+{{- end -}}
