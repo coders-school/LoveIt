@@ -118,7 +118,7 @@ other = "Wskazówka"
 other = "Sukces"
 
 [question]
-other = "Pytanie"
+other = "Czy wiesz, że..."
 
 [warning]
 other = "Ostrzeżenie"
