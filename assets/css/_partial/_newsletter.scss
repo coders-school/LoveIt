@@ -53,6 +53,17 @@
         border: 1px solid $global-font-color-dark !important;
       }
     }
+
+    .ml-form-successContent > h4 {
+      color: $global-link-hover-color !important;
+      font-family: $global-font-family !important;
+      font-size: 20px !important;
+    }
+    .ml-form-successContent > p {
+      color: $global-link-hover-color !important;
+      font-family: $global-font-family !important;
+      font-size: $global-font-size !important;
+    }
   }
   
   .newsletter-info {
