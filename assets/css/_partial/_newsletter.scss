@@ -1,0 +1,62 @@
+.newsletter {
+  width: 90%;
+  background: $header-background-color;
+  padding: 1rem 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .dark-theme & {
+    background: $header-background-color-dark;
+  }
+
+  .newsletter-title {
+    flex-grow: 1;
+    font-size: 1.4rem;
+  }
+
+  .newsletter-form {
+    flex-grow: 1;
+
+    .ml-form-embedWrapper, .embedForm {
+      background: $header-background-color !important;
+
+      .dark-theme & {
+        background: $header-background-color-dark !important;
+      }
+    }
+
+    .form-control  {
+      background: $global-background-color !important;
+      border: 1px solid $global-border-color !important;
+      color: $global-font-color !important;
+
+      &::placeholder {
+        color: $global-font-color !important;
+
+        .dark-theme & {
+          color: $global-font-color-dark !important;
+        }
+      }
+  
+      .dark-theme & {
+        background: $global-background-color-dark !important;
+        border: 1px solid $global-border-color-dark !important;
+        color: $global-font-color-dark !important;
+      }
+    }
+
+    button.primary {
+      border: 1px solid $global-font-color !important;
+
+      .dark-theme & {
+        border: 1px solid $global-font-color-dark !important;
+      }
+    }
+  }
+  
+  .newsletter-info {
+    flex-grow: 2;
+    font-size: 0.8rem;
+  }
+}

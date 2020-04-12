@@ -1,6 +1,11 @@
 /**Footer**/
 .copyright {
   font-size: .875rem;
+  background: $header-background-color;
+
+  .dark-theme & {
+    background: $header-background-color-dark;
+  }
 
   .copyright-line {
     width: 100%;
@@ -10,3 +15,5 @@
     }
   }
 }
+
+@import "_newsletter";
