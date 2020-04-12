@@ -36,7 +36,7 @@
                     clientSecret: '{{ $gitalk.clientSecret }}',
                     repo: '{{ $gitalk.repo }}',
                     owner: '{{ $gitalk.owner }}',
-                    admin: ['{{ $gitalk.owner }}'],
+                    admin: ['{{ $gitalk.admin | default $gitalk.owner }}'],
                     body: decodeURI(location.href),
                 });
                 gitalk.render('gitalk');
