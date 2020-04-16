@@ -68,7 +68,7 @@ code, pre, .highlight table, .highlight tr, .highlight td {
         background-color: darken($code-background-color, 5%);
 
         .dark-theme & {
-          background-color: darken($code-background-color-dark, 5%);
+          background-color: lighten($code-background-color-dark, 10%);
         }
       }
     }

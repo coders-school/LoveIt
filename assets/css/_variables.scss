@@ -4,6 +4,10 @@
 
 @import "_fonts";
 
+.post-info-share span a i {
+  font-size: 24px;
+}
+
 // ========== Global ========== //
 // Font and Line Height
 $global-font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft Yahei, Segoe UI, Helvetica, Arial, sans-serif, Segoe UI Emoji !default;
@@ -333,7 +337,7 @@ $code-highlight-color-map-dark: (
 $admonition-color-map: (
   'note': #cf802a,
   'abstract': #00b0ff,
-  'info': #00b8d4,
+  'info': #cf802a,
   'tip': #00bfa5,
   'success': #00c853,
   'question': #64dd17,
@@ -349,7 +353,7 @@ $admonition-color-map: (
 $admonition-background-color-map: (
   'note': rgba(40,35,30,.3),
   'abstract': rgba(0,176,255,.1),
-  'info': rgba(0,184,212,.1),
+  'info': #cf7f2a5a,
   'tip': rgba(0,191,165,.1),
   'success': rgba(0,200,83,.1),
   'question': rgba(100,221,23,.1),
