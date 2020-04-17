@@ -8,6 +8,10 @@
   font-size: 24px;
 }
 
+summary {
+  cursor: pointer;
+}
+
 // ========== Global ========== //
 // Font and Line Height
 $global-font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft Yahei, Segoe UI, Helvetica, Arial, sans-serif, Segoe UI Emoji !default;
