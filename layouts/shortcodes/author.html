@@ -1,0 +1,18 @@
+<div class="author-profile">
+    {{- $avatar := .Get 0 -}}
+    {{- $name := .Get 1 -}}
+    {{- $link := .Get 2 -}}
+
+    {{- with $avatar -}}
+        <div class="author-avatar">
+            <a href="{{ $link }}">
+                {{- partial "plugin/image.html" (dict "src_s" . "title" "avatar" "description" $name) -}}
+            </a>
+        </div>
+    {{- end -}}
+
+    <p class="author-name">
+        {{- $name -}}
+    </p>
+
+</div>
