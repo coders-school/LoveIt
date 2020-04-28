@@ -1,40 +1,21 @@
 {{- define "title" }}{{ .Title | html }} | {{ .Site.Title | html }}{{ end -}}
 
 {{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
     <div class="page single special">
         {{- /* Title */ -}}
         <h1 class="single-title animated pulse faster">
             {{- .Title -}}
         </h1>
 
-        {{- /* TOC */ -}}
-        {{- if or .Params.toc (and .Site.Params.toc (ne .Params.toc false)) -}}
-            <div class="toc" id="toc-auto">
-                <h2 class="toc-title">{{ T "contents" }}</h2>
-                {{- $globalAutoCollapseToc := .Site.Params.autoCollapseToc | default true }}
-                <div class="toc-content{{ if not (and $globalAutoCollapseToc (ne .Params.autoCollapseToc false)) }} always-active{{ end }}" id="toc-content-auto"></div>
-            </div>
-            <div class="toc" id="toc-static">
-                <details>
-                    <summary>
-                        <div class="toc-title">
-                            <span>{{ T "contents" }}</span>
-                            <span><i class="details icon fas fa-angle-down"></i></span>
-                        </div>
-                    </summary>
-                    <div class="toc-content" id="toc-content-static">
-                        {{- $toc := .TableOfContents -}}
-                        {{- $toc = partial "function/fontawesome.html" $toc -}}
-                        {{- $toc = partial "function/ruby.html" $toc -}}
-                        {{- $toc | safeHTML -}}
-                    </div>
-                </details>
-            </div>
+        {{- /* Subtitle */ -}}
+        {{- with $params.subtitle -}}
+            <h2 class="single-subtitle">{{ . }}</h2>
         {{- end -}}
 
         {{- /* Content */ -}}
         <div class="content" id="content">
-            {{- partial "single/content.html" .Content -}}
+            {{- dict "content" .Content "ruby" $params.ruby "fraction" $params.fraction "fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
         </div>
 
         {{- /* Footer */ -}}
