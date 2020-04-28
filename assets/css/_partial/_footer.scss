@@ -4,9 +4,15 @@ footer {
   text-align: center;
   line-height: 1.5rem;
   padding-top: 2rem;
-
+  
   .footer-container {
     font-size: .875rem;
+    background-color: $header-background-color;
+
+    [theme=dark] & {
+      background: $header-background-color-dark;
+    }
+  
 
     .footer-line {
       width: 100%;

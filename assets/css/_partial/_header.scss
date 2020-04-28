@@ -186,6 +186,7 @@ header {
 
         [theme=dark] & {
           color: $header-hover-color-dark;
+          border-bottom: 2px solid $header-hover-color-dark;
         }
       }
     }

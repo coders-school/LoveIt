@@ -2,9 +2,9 @@
     <footer class="footer">
         <div class="footer-container">
             {{- /* Custom Content */ -}}
+            {{- partial "newsletter.html" . -}}
             {{- with .Site.Params.footer.custom -}}
                 <div class="footer-line">
-                    {{- partial "newsletter.html" . -}}
                     {{- safeHTML . -}}
                 </div>
             {{- end -}}

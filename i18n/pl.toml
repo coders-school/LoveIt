@@ -69,7 +69,7 @@ other = "pl"
 other = "Szukaj"
 
 [searchPlaceholder]
-other = "Wyszukaj tytuł lub treść artykułu ..."
+other = "Wyszukaj..."
 
 [clear]
 other = "Pusty"

@@ -23,7 +23,7 @@
             {{- dict "source" $source "minify" true "fingerprint" $fingerprint | dict "scratch" $.Scratch "data" | partial "scratch/stylesheet.html" -}}
             {{- $source := $cdn.gitalkJS | default "lib/gitalk/gitalk.min.js" -}}
             {{- dict "source" $source "fingerprint" $fingerprint | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
-            {{- $commentConfig = dict "id" .Date "title" .Title "clientID" $gitalk.clientId "clientSecret" $gitalk.clientSecret "repo" $gitalk.repo "owner" $gitalk.owner "admin" (slice $gitalk.owner) | dict "gitalk" | merge $commentConfig -}}
+            {{- $commentConfig = dict "id" .Date "title" .Title "clientID" $gitalk.clientId "clientSecret" $gitalk.clientSecret "repo" $gitalk.repo "owner" $gitalk.owner "admin" $gitalk.admin | dict "gitalk" | merge $commentConfig -}}
             <noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
             </noscript>

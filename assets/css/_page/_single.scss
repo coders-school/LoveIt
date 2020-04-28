@@ -239,12 +239,7 @@
 
     blockquote {
       display: block;
-
-      /*
-      border-width: 1px 0;
-      border-style: solid;
-      border-color: $global-border-color;
-      padding: 1.5em 1.2em 0.5em 1.2em;
+      padding: 1.5em 1.2em 0.5em 1.2em !important;
       margin: 0 0 2em 0;
       position: relative;
 
@@ -276,7 +271,7 @@
           color: $single-link-color-dark;
         }
       }
-      */
+      
 
       border-left: .5rem solid $blockquote-color;
       background-color: rgba($blockquote-color, .2);

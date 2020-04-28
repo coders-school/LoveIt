@@ -6,7 +6,7 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  .dark-theme & {
+  [theme=dark] & {
     background: $header-background-color-dark;
   }
 
@@ -21,7 +21,7 @@
     .ml-form-embedWrapper, .embedForm {
       background: $header-background-color !important;
 
-      .dark-theme & {
+      [theme=dark] & {
         background: $header-background-color-dark !important;
       }
     }
@@ -34,12 +34,12 @@
       &::placeholder {
         color: $global-font-color !important;
 
-        .dark-theme & {
+        [theme=dark] & {
           color: $global-font-color-dark !important;
         }
       }
   
-      .dark-theme & {
+      [theme=dark] & {
         background: $global-background-color-dark !important;
         border: 1px solid $global-border-color-dark !important;
         color: $global-font-color-dark !important;
@@ -49,7 +49,7 @@
     button.primary {
       border: 1px solid $global-font-color !important;
 
-      .dark-theme & {
+      [theme=dark] & {
         border: 1px solid $global-font-color-dark !important;
       }
     }
@@ -68,6 +68,6 @@
   
   .newsletter-info {
     flex-grow: 2;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }

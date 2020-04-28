@@ -13,6 +13,12 @@ summary {
   cursor: pointer;
 }
 
+// Theme colors:
+// #CF802A
+// #363232
+// #272625
+// #8B3536;
+
 // ========== Global ========== //
 // Font and Line Height
 $global-font-family: 'Rajdhani', system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei UI, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif !default;
@@ -111,7 +117,7 @@ $table-thead-color-dark: #272625 !default;
 
 // Color of the blockquote
 $blockquote-color: #6bd6fd !default;
-$blockquote-color-dark: #59c5ec !default;
+$blockquote-color-dark: #8B3536 !default;
 // ========== Single Content ========== //
 
 // ========== Pagination ========== //

@@ -2,6 +2,15 @@
 
 {{- define "content" -}}
     {{- $params := .Scratch.Get "params" -}}
+
+    {{- /* Auto TOC */ -}}
+    {{- if ne $params.toc.enable false -}}
+        <div class="toc" id="toc-auto">
+            <h2 class="toc-title">{{ T "contents" }}</h2>
+            <div class="toc-content{{ if eq $params.toc.auto false }} always-active{{ end }}" id="toc-content-auto"></div>
+        </div>
+    {{- end -}}
+
     <div class="page single special">
         {{- /* Title */ -}}
         <h1 class="single-title animated pulse faster">
@@ -11,6 +20,19 @@
         {{- /* Subtitle */ -}}
         {{- with $params.subtitle -}}
             <h2 class="single-subtitle">{{ . }}</h2>
+        {{- end -}}
+
+        {{- /* Static TOC */ -}}
+        {{- if ne $params.toc.enable false -}}
+            <div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>{{ T "contents" }}</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static">
+                    {{- dict "content" .TableOfContents "ruby" $params.ruby "fraction" $params.fraction "fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                </div>
+            </div>
         {{- end -}}
 
         {{- /* Content */ -}}
