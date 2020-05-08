@@ -6,7 +6,7 @@
     {{- with $avatar -}}
         <div class="author-avatar">
             <a href="{{ $link }}">
-                {{- partial "plugin/image.html" (dict "src_s" . "title" "avatar" "description" $name) -}}
+                {{- partial "plugin/image.html" (dict "src" . "title" "avatar" "description" $name) -}}
             </a>
         </div>
     {{- end -}}

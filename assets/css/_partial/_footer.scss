@@ -1,19 +1,29 @@
-/**Footer**/
-.copyright {
-  font-size: .875rem;
-  background: $header-background-color;
+footer {
+  height: 2rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5rem;
+  padding-top: 2rem;
+  
+  .footer-container {
+    font-size: .875rem;
+    background-color: $header-background-color;
 
-  .dark-theme & {
-    background: $header-background-color-dark;
-  }
+    [theme=dark] & {
+      background: $header-background-color-dark;
+    }
+  
 
-  .copyright-line {
-    width: 100%;
+    .footer-line {
+      width: 100%;
 
-    .icp-br {
-      display: none;
+      .icp-br {
+        display: none;
+      }
     }
   }
+
+  @include blur;
 }
 
 @import "_newsletter";
