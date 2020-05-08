@@ -13,7 +13,7 @@
       padding-left: .8rem;
       list-style: none;
 
-      a::before {
+      a:first-child::before {
         content: "|";
         font-weight: bolder;
         margin-right: .5rem;
@@ -53,10 +53,11 @@
   width: $MAX_LENGTH;
   padding: 0 .8rem;
   border-left: 4px solid $global-border-color;
-  overflow-wrap: break-word;
+  @include overflow-wrap(break-word);
   box-sizing: border-box;
   top: if($header-normal-mode-desktop, 5rem, 10rem);
-  left: $MAX_LENGTH;
+  left: 0;
+  visibility: hidden;
 
   @include blur;
 

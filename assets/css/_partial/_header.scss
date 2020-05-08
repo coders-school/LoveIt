@@ -8,10 +8,17 @@ header {
   }
 
   .logo {
-    min-height: 1.25em;
-    height: 1.25em;
+    min-height: 1.5em;
+    height: 1.5em;
     vertical-align: text-bottom;
+  }
+
+  .logo, .header-title-pre {
     padding-right: .25rem;
+  }
+
+  .header-title-post {
+    padding-left: .25rem;
   }
 }
 
@@ -26,7 +33,7 @@ header {
 .header-title {
   font-family: $header-title-font-family;
   font-weight: bold;
-  margin: 0 .5rem;
+  margin-right: .5rem;
   min-width: 10%;
   overflow: hidden;
   white-space: nowrap;
@@ -288,6 +295,10 @@ header {
         }
       }
 
+      .search-button {
+        top: 0;
+      }
+
       .search-cancel {
         display: none;
         margin-left: .75rem;
@@ -387,7 +398,7 @@ header {
           -webkit-line-clamp: 2;
           overflow: hidden;
           text-overflow: ellipsis;
-          overflow-wrap: break-word;
+          @include overflow-wrap(break-word);
           color: $global-font-secondary-color;
 
           [theme=dark] & {
