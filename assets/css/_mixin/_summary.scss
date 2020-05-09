@@ -23,7 +23,7 @@
         height: 100%;
         left: 0;
         top: 0;
-        object-fit: cover;
+        @include object-fit(cover);
       }
 
       &:hover {
@@ -44,7 +44,7 @@
       width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
-      overflow-wrap: break-word;
+      @include overflow-wrap(break-word);
       color: $global-font-secondary-color;
 
       [theme=dark] & {
@@ -58,6 +58,7 @@
       h6,
       p {
         font-size: 1rem;
+        line-height: 1.5;
         display: inline;
 
         &::after {
@@ -66,35 +67,15 @@
         }
       }
 
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        line-height: 2;
-
-        &::before {
-          content: "|";
-          margin-right: .3125rem;
-          color: $global-link-color;
-
-          [theme=dark] & {
-            color: $global-link-color-dark;
-          }
-        }
-      }
-
       h2 {
-        font-size: 1.2rem;
-
-        &::before {
-          content: "#";
-        }
+        font-size: 1.125rem;
       }
 
-      @include link(true, true);
+      @include link(false, true);
 
       b, strong {
+        color: $global-font-secondary-color;
+
         [theme=dark] & {
           color: $global-font-secondary-color-dark;
         }

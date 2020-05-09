@@ -7,8 +7,9 @@ draft: false
 author: "Dillon"
 authorLink: "https://dillonzq.com"
 description: "Cet article présente la syntaxe et le format de base de Markdown."
+images: ["/images/basic-markdown-syntax/featured-image.png"]
 
-tags: ["Markdown"]
+tags: ["Markdown", "HTML"]
 categories: ["Markdown"]
 featuredImage: "/images/basic-markdown-syntax/featured-image.png"
 
@@ -21,7 +22,7 @@ Cet article propose un exemple de syntaxe Markdown de base qui peut être utilis
 
 {{< admonition warning >}}
 Sorry, this article has not been completely translated into **French**.
-Welcome to take the time to propose a translation by [making a PR](https://github.com/dillonzq/LoveIt/pulls) to the theme!
+Welcome to take the time to propose a translation by [:(fas fa-code-branch fa-fw): making a PR](https://github.com/dillonzq/LoveIt/pulls) to the theme!
 {{< /admonition >}}
 
 {{< admonition >}}

@@ -86,6 +86,7 @@ enableEmoji = true
       [[languages.en.menu.main]]
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
+        post = ""
         name = ""
         url = "https://github.com/dillonzq/LoveIt"
         title = "GitHub"
@@ -114,10 +115,18 @@ enableEmoji = true
         enable = true
         # type of search engine ("lunr", "algolia")
         type = "algolia"
-        # index length of the content
-        contentLength = 5000
+        # max index length of the chunked content
+        contentLength = 4000
         # placeholder of the search bar
         placeholder = ""
+        # max number of results length
+        maxResultLength = 10
+        # snippet length of the result
+        snippetLength = 30
+        # HTML tag name of the highlight part in results
+        highlightTag = "em"
+        # whether to use the absolute URL based on the baseURL in search index
+        absoluteURL = false
         [languages.en.params.search.algolia]
           index = "index.en"
           appID = "PASDMWALPK"
@@ -133,6 +142,8 @@ enableEmoji = true
           gravatarEmail = ""
           # URL of avatar shown in home page
           avatarURL = "/images/avatar.png"
+          # title shown in home page
+          title = ""
           # subtitle shown in home page
           subtitle = "A Clean, Elegant but Advanced Hugo Theme"
           # whether to use typeit animation for subtitle
@@ -275,6 +286,7 @@ enableEmoji = true
       [[languages.zh-cn.menu.main]]
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
+        post = ""
         name = ""
         url = "https://github.com/dillonzq/LoveIt"
         title = "GitHub"
@@ -303,10 +315,18 @@ enableEmoji = true
         enable = true
         # 搜索引擎的类型 ("lunr", "algolia")
         type = "algolia"
-        # 文章内容索引长度
-        contentLength = 5000
+        # 文章内容最长索引长度
+        contentLength = 4000
         # 搜索框的占位提示语
         placeholder = ""
+        # 最大结果数目
+        maxResultLength = 10
+        # 结果内容片段长度
+        snippetLength = 50
+        # 搜索结果中高亮部分的 HTML 标签
+        highlightTag = "em"
+        # 是否在搜索索引中使用基于 baseURL 的绝对路径
+        absoluteURL = false
         [languages.zh-cn.params.search.algolia]
           index = "index.zh-cn"
           appID = "PASDMWALPK"
@@ -322,6 +342,8 @@ enableEmoji = true
           gravatarEmail = ""
           # 主页显示头像的 URL
           avatarURL = "/images/avatar.png"
+          # 主页显示的网站标题
+          title = ""
           # 主页显示的网站副标题
           subtitle = "一个简洁、优雅且高效的 Hugo 主题"
           # 是否为副标题显示打字机动画
@@ -460,6 +482,7 @@ enableEmoji = true
       [[languages.fr.menu.main]]
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
+        post = ""
         name = ""
         url = "https://github.com/dillonzq/LoveIt"
         title = "GitHub"
@@ -488,10 +511,18 @@ enableEmoji = true
         enable = true
         # type of search engine ("lunr", "algolia")
         type = "algolia"
-        # index length of the content
-        contentLength = 5000
+        # max index length of the chunked content
+        contentLength = 4000
         # placeholder of the search bar
         placeholder = ""
+        # max number of results length
+        maxResultLength = 10
+        # snippet length of the result
+        snippetLength = 30
+        # HTML tag name of the highlight part in results
+        highlightTag = "em"
+        # whether to use the absolute URL based on the baseURL in search index
+        absoluteURL = false
         [languages.fr.params.search.algolia]
           index = "index.fr"
           appID = "PASDMWALPK"
@@ -507,6 +538,8 @@ enableEmoji = true
           gravatarEmail = ""
           # URL of avatar shown in home page
           avatarURL = "/images/avatar.png"
+          # title shown in home page
+          title = ""
           # subtitle shown in home page
           subtitle = "Un thème Hugo simple, élégant et efficace"
           # whether to use typeit animation for subtitle
@@ -603,6 +636,9 @@ enableEmoji = true
   # date format
   # 日期格式
   dateFormat = "2006-01-02"
+  # website images for Open Graph and Twitter Cards
+  # 网站图片, 用于 Open Graph 和 Twitter Cards
+  images = ["/logo.png"]
 
   # Header config
   # 页面头部导航栏配置
@@ -624,10 +660,13 @@ enableEmoji = true
       name = "LoveIt"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = "<i class='far fa-kiss-wink-heart fa-fw'></i> "
+      pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
+      # whether to use typeit animation for title name
+      # 是否为标题显示打字机动画
+      typeit = false
 
   # Footer config
   # 页面底部信息配置
@@ -708,6 +747,9 @@ enableEmoji = true
     # whether to show link to Raw Markdown content of the content
     # 是否显示原始 Markdown 文档内容的链接
     linkToMarkdown = true
+    # whether to show the full text content in RSS
+    # 是否在 RSS 中显示全文内容
+    rssFullText = false
     # Table of the contents config
     # 目录配置
     [params.page.toc]
@@ -834,6 +876,13 @@ enableEmoji = true
         highlight = true
         enableQQ = false
         serverURLs = ""
+        # emoji config file name, default is "google.yml"
+        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+        # located in "assets/data/emoji/" directory, where you can put your config file
+        # emoji 配置文件名称, 默认是 "facebook.yml"
+        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+        # 位于 "assets/data/emoji/" 目录, 你可以在此存放你自己的配置文件
+        emoji = ""
       # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
       # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
@@ -853,10 +902,20 @@ enableEmoji = true
         colorful = true
         dislikes = false
         outlined = false
-      # Commento comments config (https://commento.io/)
-      # Commento comments 评论系统设置 (https://commento.io/)
+      # Commento comment config (https://commento.io/)
+      # Commento comment 评论系统设置 (https://commento.io/)
       [params.page.comment.commento]
         enable = false
+      # Utterances comment config (https://utteranc.es/)
+      # Utterances comment 评论系统设置 (https://utteranc.es/)
+      [params.page.comment.utterances]
+        enable = false
+        # owner/repo
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
     # SEO config
     # SEO 配置
     [params.page.seo]
@@ -880,6 +939,22 @@ enableEmoji = true
         url = "cover.png"
         width = 800
         height = 600
+
+  # TypeIt config
+  # TypeIt 配置
+  [params.typeit]
+    # typing speed between each step (measured in milliseconds)
+    # 每一步的打字速度 (单位是毫秒)
+    speed = 100
+    # blinking speed of the cursor (measured in milliseconds)
+    # 光标的闪烁速度 (单位是毫秒)
+    cursorSpeed = 1000
+    # character used for the cursor (HTML format is supported)
+    # 光标的字符 (支持 HTML 格式)
+    cursorChar = "|"
+    # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+    # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
+    duration = -1
 
   # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
   # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
@@ -914,62 +989,66 @@ enableEmoji = true
   # CSS 和 JS 文件的 CDN 设置
   [params.cdn]
     # normalize.css@8.0.1 https://github.com/necolas/normalize.css
-    normalizeCSS = ''
+    normalizeCSS = ""
     # fontawesome-free@5.13.0 https://fontawesome.com/
-    fontawesomeFreeCSS = ''
+    fontawesomeFreeCSS = ""
     # simple-icons@2.9.0 https://github.com/simple-icons/simple-icons
-    # ('https://cdn.jsdelivr.net/npm/simple-icons@v2/icons/')
-    simpleIconsPrefix = ''
+    # ("https://cdn.jsdelivr.net/npm/simple-icons@v2/icons/")
+    simpleIconsPrefix = ""
     # animate.css@3.7.2 https://github.com/daneden/animate.css
-    animateCSS = ''
+    animateCSS = ""
     # smooth-scroll@16.1.3 https://github.com/cferdinandi/smooth-scroll
-    smoothScrollJS = ''
+    smoothScrollJS = ""
     # autocomplete.js@0.37.1 https://github.com/algolia/autocomplete.js
-    autocompleteJS = ''
+    autocompleteJS = ""
     # lunr.js@2.3.8 https://lunrjs.com/
-    lunrJS = ''
+    lunrJS = ""
     # algoliasearch@4.2.0 https://github.com/algolia/algoliasearch-client-javascript
-    algoliasearchJS = ''
+    algoliasearchJS = ""
     # lazysizes@5.2.0 https://github.com/aFarkas/lazysizes
-    lazysizesJS = ''
+    lazysizesJS = ""
+    # object-fit-images@3.2.4 https://github.com/fregante/object-fit-images
+    objectFitImagesJS = ""
     # twemoji@12.1.5 https://github.com/twitter/twemoji
-    twemojiJS = ''
-    # lightgallery.js@1.1.3 lg-thumbnail@1.1.0 lg-zoom@1.1.0 https://github.com/sachinchoolur/lightgallery.js
-    lightgalleryCSS = ''
-    lightgalleryJS = ''
-    lightgalleryThumbnailJS = ''
-    lightgalleryZoomJS = ''
+    twemojiJS = ""
+    # lightgallery.js@1.1.3 https://github.com/sachinchoolur/lightgallery.js
+    # lg-thumbnail.js@1.1.0 https://github.com/sachinchoolur/lg-thumbnail.js
+    # lg-zoom.js@1.0.1 https://github.com/sachinchoolur/lg-zoom.js
+    lightgalleryCSS = ""
+    lightgalleryJS = ""
+    lightgalleryThumbnailJS = ""
+    lightgalleryZoomJS = ""
     # clipboard.js@2.0.6 https://github.com/zenorocha/clipboard.js
-    clipboardJS = ''
+    clipboardJS = ""
     # sharer.js@0.4.0 https://github.com/ellisonleao/sharer.js
-    sharerJS = ''
-    # typeit@7.0.3 https://github.com/alexmacarthur/typeit
-    typeitJS = ''
+    sharerJS = ""
+    # typeit@7.0.4 https://github.com/alexmacarthur/typeit
+    typeitJS = ""
     # katex@0.11.1 https://katex.org/
-    katexCSS = ''
-    katexJS = ''
-    katexAutoRenderJS = ''
-    katexCopyTexCSS = ''
-    katexCopyTexJS = ''
-    katexMhchemJS = ''
+    katexCSS = ""
+    katexJS = ""
+    katexAutoRenderJS = ""
+    katexCopyTexCSS = ""
+    katexCopyTexJS = ""
+    katexMhchemJS = ""
     # mermaid@8.5.0 https://github.com/knsv/mermaid
-    mermaidJS = ''
+    mermaidJS = ""
     # echarts@4.7.0 https://echarts.apache.org/
-    echartsJS = ''
-    echartsMacaronsJS = ''
-    # mapbox-gl@1.9.1 https://docs.mapbox.com/mapbox-gl-js
-    mapboxGLCSS = ''
-    mapboxGLJS = ''
+    echartsJS = ""
+    echartsMacaronsJS = ""
+    # mapbox-gl@1.10.0 https://docs.mapbox.com/mapbox-gl-js
+    mapboxGLCSS = ""
+    mapboxGLJS = ""
     # aplayer@1.10.1 https://github.com/MoePlayer/APlayer
-    aplayerCSS = ''
-    aplayerJS = ''
+    aplayerCSS = ""
+    aplayerJS = ""
     # meting@2.0.1 https://github.com/metowolf/MetingJS
-    metingJS = ''
+    metingJS = ""
     # gitalk@1.6.2 https://github.com/gitalk/gitalk
-    gitalkCSS = ''
-    gitalkJS = ''
-    # valine@1.4.9 https://valine.js.org/
-    valineJS = ''
+    gitalkCSS = ""
+    gitalkJS = ""
+    # valine@1.4.14 https://valine.js.org/
+    valineJS = ""
 
 # Markup related configuration in Hugo
 # Hugo 解析文档的配置

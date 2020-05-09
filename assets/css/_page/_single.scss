@@ -128,8 +128,7 @@
     @include link(false, false);
 
     a {
-      word-break: break-all;
-      word-break: break-word;
+      @include overflow-wrap(break-word);
 
       [theme=dark] & b, [theme=dark] & strong {
         color: $single-link-color-dark;
@@ -213,6 +212,7 @@
     }
 
     figure {
+      margin: .5rem;
       text-align: center;
 
       .image-caption:not(:empty) {
@@ -234,7 +234,7 @@
     }
 
     .lazyloading {
-      object-fit: none;
+      @include object-fit(none);
     }
 
     blockquote {

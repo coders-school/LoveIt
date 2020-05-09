@@ -7,6 +7,7 @@ draft: false
 author: "Dillon"
 authorLink: "https://dillonzq.com"
 description: "Find out how to create and organize your content quickly and intuitively in LoveIt theme."
+images: ["/images/theme-documentation-content/featured-image.jpg"]
 
 tags: ["content", "Markdown"]
 categories: ["documentation"]
@@ -54,6 +55,7 @@ author: ""
 authorLink: ""
 description: ""
 license: ""
+images: []
 
 tags: []
 categories: []
@@ -68,6 +70,7 @@ ruby: true
 fraction: true
 fontawesome: true
 linkToMarkdown: true
+rssFullText: false
 
 toc:
   enable: true
@@ -99,6 +102,7 @@ comment:
 * **authorLink**: the link of the author.
 * **description**: the description for the content.
 * **license**: the special lisence for this content.
+* **images**: page images for Open Graph and Twitter Cards.
 
 * **tags**: the tags for the content.
 * **categories**: the categories for the content.
@@ -112,7 +116,8 @@ comment:
 * **ruby**: {{< version 0.2.0 >}} if `true`, the content will enable the [ruby extended syntax](#ruby).
 * **fraction**: {{< version 0.2.0 >}} if `true`, the content will enable the [fraction extended syntax](#fraction).
 * **fontawesome**: {{< version 0.2.0 >}} if `true`, the content will enable the [Font Awesome extended syntax](#fontawesome).
-* **linkToMarkdown**: if `true`, the footer of the content will show the link to the orignal Markdown file.
+* **linkToMarkdown**: if `true`, the footer of the content will be shown the link to the orignal Markdown file.
+* **rssFullText**: {{< version 0.2.4 >}} if `true`, the full text content will be shown in RSS.
 
 * **toc**: {{< version 0.2.0 changed >}} the same as the `params.page.toc` part in the [site configuration](../theme-documentation-basics#site-configuration).
 * **code**: {{< version 0.2.0 >}} the same as the `params.page.code` part in the [site configuration](../theme-documentation-basics#site-configuration).
@@ -209,7 +214,7 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 
 #### Inline Formula
 
-The default block delimiters are `$`/`$` and `\\(`/`\\)`:
+The default inline delimiters are `$`/`$` and `\\(`/`\\)`:
 
 ```markdown
 $ c = \pm\sqrt{a^2 + b^2} $ and \\( f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \\)
