@@ -40,7 +40,6 @@
             {{- dict "content" .Content "ruby" $params.ruby "fraction" $params.fraction "fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
         </div>
 
-<<<<<<< HEAD
         {{- /* Footer */ -}}
         {{- partial "single/footer.html" . -}}
 
@@ -50,9 +49,5 @@
                 {{- partial "comment.html" . -}}
             {{- end -}}
         </div>
-=======
-        {{- /* Comment */ -}}
-        {{- partial "comment.html" . -}}
->>>>>>> new-updated-loveit/master
     </div>
 {{- end -}}
