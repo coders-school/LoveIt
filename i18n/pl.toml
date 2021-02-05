@@ -42,7 +42,7 @@ other = "Więcej"
 other = "Wybierz język"
 
 [switchTheme]
-other = "Przełącz schemat"
+other = "Przełącz szablon"
 # === partials/header.html ===
 
 # === partials/footer.html ===
@@ -97,7 +97,7 @@ other = "Udostępnij na"
 other = "Spis treści"
 
 [publish]
-other = "opublikowano"
+other = "opublikowany"
 
 [included]
 other = "zawarty w"
@@ -130,7 +130,7 @@ other = "Wstecz"
 other = "Strona główna"
 
 [readMore]
-other = "Czytaj więcej"
+other = "Pokaż więcej"
 # === posts/single.html ===
 
 # === 404.html ===
